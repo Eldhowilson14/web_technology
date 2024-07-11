@@ -17,6 +17,10 @@ app.use(
   })
 );
 
+app.get('/',(req,res)=>{
+  res.send("Server is runnig")
+})
+
 app.use(express.json({ limit: "16kb" })); //set the limit of data to sending
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
